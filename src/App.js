@@ -1,25 +1,12 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useState, useEffect} from 'react';
-
-
+import React from 'react';
 
 const App = () => {
 
-  const [counter, setCounter] = useState(0);
+    return(
+        <h1>App</h1>
 
-  useEffect(() => {
-  }, [counter]);
+    );
 
-
-  return (
-    <div className="App">
-      <button onClick={() => setCounter((prevCount) => prevCount -1)}> - </button>
-      <h1>{counter}</h1>
-      <button onClick={() => setCounter((prevCount) => prevCount +1)}> + </button>
-     
-    </div>
-  );
-};
+}
 
 export default App;
