@@ -1,34 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState, useEffect} from 'react';
 
 
-const Person = () => {
 
-  return(
-    <>
-      <h1>Name: John</h1>
-      <h2>Last Name: Doe</h2>
-      <h3>Age: 30</h3>
-    </>
-  )
-}
+const App = () => {
 
-const App = () =>{
+  const [counter, setCounter] = useState(0);
 
-  const name = null;
-  const isNameShowing = false;
-  const isUserLoggedIN = true;
+  useEffect(() => {
+  }, [counter]);
+
 
   return (
     <div className="App">
-      <h1>
-        <Person/>
-      </h1>
-      <Person/>
-      <Person/> 
-      
+      <button onClick={() => setCounter((prevCount) => prevCount -1)}> - </button>
+      <h1>{counter}</h1>
+      <button onClick={() => setCounter((prevCount) => prevCount +1)}> + </button>
+     
     </div>
   );
-}
+};
 
 export default App;
